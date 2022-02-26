@@ -8,8 +8,23 @@
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 
 
+
+body{
+	width: 100%;
+	margin: 0 auto;
+}
+
+.page-wrapper{
+	width: 95%;
+	margin: 5% auto;
+	border: 1px solid black;
+	display: grid;
+}
+
+
+
 /* basic elements */
-html {
+/* html {
 	margin: 0;
 	padding: 0;
 	}
@@ -47,11 +62,11 @@ a:hover, a:focus, a:active {
 	}
 abbr {
 	border-bottom: none;
-	}
+	} */
 
 
 /* specific divs */
-.page-wrapper { 
+/* .page-wrapper { 
 	background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left; 
 	padding: 0 175px 0 110px;  
 	margin: 0; 
@@ -191,4 +206,4 @@ footer a:link, footer a:visited {
 	right: 0; 
 	width: 148px; 
 	height: 110px;
-	}
+	} */
