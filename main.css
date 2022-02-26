@@ -53,8 +53,37 @@ body{
 }
 
 @media screen and (min-width: 768px) {
+	.page-wrapper{
+		width: 95%;
+		height: 1000px;
+		margin: 5% auto;
+		border: 1px solid black;
+		display: grid;
+		grid-template-columns: 40% 60%;
+		/* gap: 1%; */
+	}
 	
+	.intro{
+		display: grid;
+		grid-template-rows: 20% 20% 60%;
+		grid-column: 1 / 2;
+		border: 1px solid red;
+		grid-row-start: 1;	
+	}
+
+	.main-supporting{
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		/*grid-column: 2 / 4;*/
+		grid-row-start: 1;
+		grid-column-start: 3;
+		background-color: aqua;
+		/* grid-template-rows: repeat(5,1fr); */
+	}
   }
+
+
 
 
 
