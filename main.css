@@ -16,11 +16,45 @@ body{
 
 .page-wrapper{
 	width: 95%;
+	height: 1000px;
 	margin: 5% auto;
 	border: 1px solid black;
-	display: grid;
-	background-color: aqua;
+	
+	/* gap: 1%; */
 }
+
+.intro{
+	display: grid;
+	grid-template-rows: 20% 20% 60%;
+	grid-column: 1 / 3;
+	border: 1px solid red;
+}
+#zen-supporting{
+	grid-column-start: 1;
+}
+
+.main-supporting{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	/* grid-template-rows: repeat(5,1fr); */
+}
+.explanation{
+	border: 1px solid green;
+}
+.participation{
+	grid-column: 2/3;
+	border: 1px solid blue;
+}
+.benefits{
+	grid-column: 1/3
+}
+.requirements{
+	grid-column: 1/3
+}
+
+@media screen and (min-width: 768px) {
+	
+  }
 
 
 
