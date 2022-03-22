@@ -1,0 +1,28 @@
+{
+  "name": "wdd331-zen-garden",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "rimraf build/*",
+    "start": "parcel index.html --dist-dir build",
+    "prebuild": "rimraf dist/*",
+    "build": "parcel build index.html --public-url ./",
+    "watch": "parcel watch index.html -dist-dir build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coltonkramer/wdd331-zen-garden.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coltonkramer/wdd331-zen-garden/issues"
+  },
+  "homepage": "https://github.com/coltonkramer/wdd331-zen-garden#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1",
+    "parcel": "^2.3.2"
+  }
+}
