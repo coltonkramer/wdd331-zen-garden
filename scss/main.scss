@@ -17,8 +17,8 @@ $red: #fc3f21;
 $blue: #0b43dc;
 $green: #1bb476;
 $yellow: #fed040;
-$white: #fff;
-$accent: #f0f8ff;
+$white: #e9eef3;
+
 $black: #000;
 
 // -----------------------
@@ -29,30 +29,21 @@ $margin: 0 auto;
 html, body{
     width: 100%;
 	margin: $margin;
-    color: $white;
     font-family: $font-para;
     overflow-x: hidden;
-    a{
-        color: $white;
+    a,h3{
+        color: $black;
         font-family: $font-para;
-    }
-    h3{
-        font-family: $font-heading;
-
     }
 }
 header{
-    margin: 1em;
-    // text-align: center;
+    margin: 0 0 1em 1em;
     height: max-content;
     background-color: $red;
     padding: 1em 0;
-    // float: left;
     h1{
         font-family: $font-heading;
-        border: $white solid 1px;
-        background-color: #fff;
-        color: $black;
+        background-color: $white;
         padding: $padding;
         font-size: 3.5em;
         letter-spacing: .05em;
@@ -70,6 +61,7 @@ header{
     }
 }
 footer{
+
     display: flex;
     justify-content: space-evenly;
     padding: $padding;
@@ -82,37 +74,30 @@ footer{
 }
 .page-wrapper{
 	width: 100%;
+    background-color: $white;
 	// border: 1px solid black;
 }
 .intro{
     background-color: $white;
 }
 .main-supporting{
-    z-index: 1;
+    background-color: $white;
+
 
 }
 .summary{
     margin: 1em 1em 1em 0;
-    background-color: $black;
-    color: $white;
     padding: $padding;
-    p{
-        a:nth-child(1){
-        
-            color: $yellow;
-        }
-        a:nth-child(2){
-        
-            color: $green;
-        }
-    }
+    
 }
 
 .preamble{
-    margin: 1em 0 1em 1em;
+    margin: 1em 1em 1em 0;
     padding: $padding;
     background-color: $yellow;
-    color: black;
+    position: relative;
+
+
     h3{
     padding: $padding;
     text-align: right;
@@ -123,9 +108,9 @@ footer{
 
     }
 }
+
 .explanation{
-    background-color: $white;
-    color: $black;
+	margin: 1em 0 1em 1em;
     padding: $padding;
 
 }
@@ -143,38 +128,81 @@ footer{
 
     }
     a{
-        color: $white;
+        color: $black;
     }
 
 }
 .benefits{
-	grid-column: 1/3;
-    background-color: $white;
-    color: $black;
+    margin: 0 1em 1em 0;
     padding: $padding;
 
 }
 .requirements{
-	grid-column: 1/3;
     background-color: $blue;
+    color: $white;
     margin: 1em 1em 1em 0;
     padding: $padding;
-        a{
-            color: $red;
-        }
+    h3,a{
+        color: $white;
+    }
 }
 .sidebar{
-    padding: 1em 0;
-    background-color: white;
-    border: 1px solid $black;
-    color: $black;
-    a{
-        color: $black;
-
+    width: 100%;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        :nth-child(1){
+            background-color: $red;
+        }
+        :nth-child(2){
+            background-color: $yellow;
+        }
+        :nth-child(3){
+            background-color: $green;
+        }
+        :nth-child(4){
+            background-color: $blue;
+        }
+        :nth-child(8){
+            background-color: $red;
+        }
+        :nth-child(7){
+            background-color: $yellow;
+        }
+        :nth-child(6){
+            background-color: $green;
+        }
+        :nth-child(5){
+            background-color: $blue;
+        }
+        
+        
+    }
+    li{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 150px;
+        width: 150px;
+        margin-top: 1em;
+        border-radius: 50%;
+        :nth-child(1){
+            background-color: rgba(0,0,0,0)
+        }
+        :nth-child(2){
+            background-color: rgba(0,0,0,0);
+        }
+        :nth-child(3){
+            background-color: rgba(0,0,0,0);
+        }
+        :nth-child(4){
+            background-color: rgba(0,0,0,0);
+        }
     }
 }
 .design-selection{
-    background-color: $green;
     margin: 1em 1em 1em 0;
 
     h3,ul{
@@ -185,14 +213,8 @@ footer{
     h3{
         font-weight: bold;
     }
-    li{
-        padding-left: 1em;
-    }
-
 }
 .design-archives{
-    background-color: $white;
-    color:$black;
     margin: 1em 0 1em 1em;
 
     h3,ul{
@@ -204,7 +226,7 @@ footer{
         font-weight: bold;
     }
     li{
-        padding-left: 1em;
+        padding-left: 0;
     }
     a{
         color:$black;
@@ -212,9 +234,7 @@ footer{
 
 }
 .zen-resources{
-    background-color: $blue;
     margin: 1em 1em 1em 0;
-    // padding: $padding;
 
     h3,ul{
         margin: $margin;
@@ -225,132 +245,12 @@ footer{
         font-weight: bold;
     }
     li{
-        padding-left: 1em;
+        padding-left: 0;
     }
 }
 
-
-
-/* @media screen and (min-width: 768px){
-	.intro{
-		grid-template-rows: 15% 15% 60%;
-		grid-column: 1 / 2;
-		grid-row-start: 1;	
-	}
-	
-	.sidebar{
-		position: absolute;
-		top: 75%;
-	}
-} */
 @media screen and (min-width: 768px) {
-    body{
-        overflow-y: hidden;
-        background-color: $white;
-        a{
-            text-decoration: none;
-        }
-        a:hover{
-            text-decoration: underline;
-            transform: scale(1.1);
-        }
-    }
-	.page-wrapper{
-		margin: $margin;
-        width: 85%;
-		position: relative;
-        // background-color: $black;
-        
-	}
-	.intro{
-        width: 60%;
-        margin: $margin;
-        background-color: $accent;
-		
-	}
-    .preamble{
-        margin: 1em 0 0 1em;
-    }
-	.main-supporting{
-        width: 60%;
-        padding-top: $padding;
-        margin: $margin;
-        background-color: $accent;
-
-    }
-    .explanation{
-        margin: 0 1em 1em 0;
-    }
-    .benefits{
-        margin: 0 1em 1em 0;
-
-    }
-    .requirements{
-        margin: 0 0 1em 1em;
-
-    }
-	.sidebar{
-		float: right;
-        width: 15%;
-        position: absolute;
-        top: 1em;
-        right: 4em;
-	}
-    footer{
-        border: 1px solid $black;
-    }
-    .extra1{
-        width: 100%;
-        background-color: $blue;
-        height: 100px;
-        position: absolute;
-        top: 40em;
-        z-index: -2;
-        transform: rotate(45deg);
-    }
-    .extra2{
-        width: 100%;
-        background-color: $green;
-        height: 100px;
-        position: absolute;
-        top: 30em;
-        z-index: -2;
-        transform: rotate(45deg);
-    }
-    .extra3{
-        width: 100%;
-        background-color: $yellow;
-        height: 100px;
-        position: absolute;
-        top: 20em;
-        z-index: -2;
-        transform: rotate(45deg);
-    }
-    .extra4{
-        width: 100%;
-        background-color: $yellow;
-        height: 100px;
-        position: absolute;
-        top: 10em;
-        z-index: -2;
-        transform: rotate(45deg);
-    }
-    .extra5{
-        width: 100%;
-        background-color: $red;
-        height: 100px;
-        position: absolute;
-        top: 0em;
-        z-index: -2;
-        transform: rotate(45deg);
-    }
-    // .extra6{
-    //     width: 100px;
-    //     background-color: $black;
-    //     height: 150em;
-    //     position: absolute;
-    //     z-index: -2;
-    //     left: 22%;
-    //     top: 1em;
-    // }
+    // .page-wrapper{
+    //     // background-color: #000;
+    // };
 }

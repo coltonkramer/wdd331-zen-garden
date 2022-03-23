@@ -8,25 +8,20 @@
 html, body {
   width: 100%;
   margin: 0 auto;
-  color: #fff;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden; }
-  html a, body a {
-    color: #fff;
+  html a, html h3, body a, body h3 {
+    color: #000;
     font-family: "Roboto", sans-serif; }
-  html h3, body h3 {
-    font-family: "Abril Fatface", cursive; }
 
 header {
-  margin: 1em;
+  margin: 0 0 1em 1em;
   height: max-content;
   background-color: #fc3f21;
   padding: 1em 0; }
   header h1 {
     font-family: "Abril Fatface", cursive;
-    border: #fff solid 1px;
-    background-color: #fff;
-    color: #000;
+    background-color: #e9eef3;
     padding: 1em;
     font-size: 3.5em;
     letter-spacing: .05em;
@@ -47,32 +42,27 @@ footer {
   background-color: #000;
   text-align: center; }
   footer a {
-    color: #fff; }
+    color: #e9eef3; }
 
 .page-wrapper {
-  width: 100%; }
+  width: 100%;
+  background-color: #e9eef3; }
 
 .intro {
-  background-color: #fff; }
+  background-color: #e9eef3; }
 
 .main-supporting {
-  z-index: 1; }
+  background-color: #e9eef3; }
 
 .summary {
   margin: 1em 1em 1em 0;
-  background-color: #000;
-  color: #fff;
   padding: 1em; }
-  .summary p a:nth-child(1) {
-    color: #fed040; }
-  .summary p a:nth-child(2) {
-    color: #1bb476; }
 
 .preamble {
-  margin: 1em 0 1em 1em;
+  margin: 1em 1em 1em 0;
   padding: 1em;
   background-color: #fed040;
-  color: black; }
+  position: relative; }
   .preamble h3 {
     padding: 1em;
     text-align: right; }
@@ -81,8 +71,7 @@ footer {
     padding: 1em; }
 
 .explanation {
-  background-color: #fff;
-  color: #000;
+  margin: 1em 0 1em 1em;
   padding: 1em; }
 
 .participation {
@@ -96,32 +85,61 @@ footer {
     margin: 0 auto;
     padding: 1em; }
   .participation a {
-    color: #fff; }
+    color: #000; }
 
 .benefits {
-  grid-column: 1/3;
-  background-color: #fff;
-  color: #000;
+  margin: 0 1em 1em 0;
   padding: 1em; }
 
 .requirements {
-  grid-column: 1/3;
   background-color: #0b43dc;
+  color: #e9eef3;
   margin: 1em 1em 1em 0;
   padding: 1em; }
-  .requirements a {
-    color: #fc3f21; }
+  .requirements h3, .requirements a {
+    color: #e9eef3; }
 
 .sidebar {
-  padding: 1em 0;
-  background-color: white;
-  border: 1px solid #000;
-  color: #000; }
-  .sidebar a {
-    color: #000; }
+  width: 100%; }
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    .sidebar ul :nth-child(1) {
+      background-color: #fc3f21; }
+    .sidebar ul :nth-child(2) {
+      background-color: #fed040; }
+    .sidebar ul :nth-child(3) {
+      background-color: #1bb476; }
+    .sidebar ul :nth-child(4) {
+      background-color: #0b43dc; }
+    .sidebar ul :nth-child(8) {
+      background-color: #fc3f21; }
+    .sidebar ul :nth-child(7) {
+      background-color: #fed040; }
+    .sidebar ul :nth-child(6) {
+      background-color: #1bb476; }
+    .sidebar ul :nth-child(5) {
+      background-color: #0b43dc; }
+  .sidebar li {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 150px;
+    width: 150px;
+    margin-top: 1em;
+    border-radius: 50%; }
+    .sidebar li :nth-child(1) {
+      background-color: rgba(0, 0, 0, 0); }
+    .sidebar li :nth-child(2) {
+      background-color: rgba(0, 0, 0, 0); }
+    .sidebar li :nth-child(3) {
+      background-color: rgba(0, 0, 0, 0); }
+    .sidebar li :nth-child(4) {
+      background-color: rgba(0, 0, 0, 0); }
 
 .design-selection {
-  background-color: #1bb476;
   margin: 1em 1em 1em 0; }
   .design-selection h3, .design-selection ul {
     margin: 0 auto;
@@ -129,12 +147,8 @@ footer {
     list-style: none; }
   .design-selection h3 {
     font-weight: bold; }
-  .design-selection li {
-    padding-left: 1em; }
 
 .design-archives {
-  background-color: #fff;
-  color: #000;
   margin: 1em 0 1em 1em; }
   .design-archives h3, .design-archives ul {
     margin: 0 auto;
@@ -143,12 +157,11 @@ footer {
   .design-archives h3 {
     font-weight: bold; }
   .design-archives li {
-    padding-left: 1em; }
+    padding-left: 0; }
   .design-archives a {
     color: #000; }
 
 .zen-resources {
-  background-color: #0b43dc;
   margin: 1em 1em 1em 0; }
   .zen-resources h3, .zen-resources ul {
     margin: 0 auto;
@@ -157,111 +170,6 @@ footer {
   .zen-resources h3 {
     font-weight: bold; }
   .zen-resources li {
-    padding-left: 1em; }
-
-/* @media screen and (min-width: 768px){
-	.intro{
-		grid-template-rows: 15% 15% 60%;
-		grid-column: 1 / 2;
-		grid-row-start: 1;	
-	}
-	
-	.sidebar{
-		position: absolute;
-		top: 75%;
-	}
-} */
-@media screen and (min-width: 768px) {
-  body {
-    overflow-y: hidden;
-    background-color: #fff; }
-    body a {
-      text-decoration: none; }
-    body a:hover {
-      text-decoration: underline;
-      transform: scale(1.1); }
-
-  .page-wrapper {
-    margin: 0 auto;
-    width: 85%;
-    position: relative; }
-
-  .intro {
-    width: 60%;
-    margin: 0 auto;
-    background-color: #f0f8ff; }
-
-  .preamble {
-    margin: 1em 0 0 1em; }
-
-  .main-supporting {
-    width: 60%;
-    padding-top: 1em;
-    margin: 0 auto;
-    background-color: #f0f8ff; }
-
-  .explanation {
-    margin: 0 1em 1em 0; }
-
-  .benefits {
-    margin: 0 1em 1em 0; }
-
-  .requirements {
-    margin: 0 0 1em 1em; }
-
-  .sidebar {
-    float: right;
-    width: 15%;
-    position: absolute;
-    top: 1em;
-    right: 4em; }
-
-  footer {
-    border: 1px solid #000; }
-
-  .extra1 {
-    width: 100%;
-    background-color: #0b43dc;
-    height: 100px;
-    position: absolute;
-    top: 40em;
-    z-index: -2;
-    transform: rotate(45deg); }
-
-  .extra2 {
-    width: 100%;
-    background-color: #1bb476;
-    height: 100px;
-    position: absolute;
-    top: 30em;
-    z-index: -2;
-    transform: rotate(45deg); }
-
-  .extra3 {
-    width: 100%;
-    background-color: #fed040;
-    height: 100px;
-    position: absolute;
-    top: 20em;
-    z-index: -2;
-    transform: rotate(45deg); }
-
-  .extra4 {
-    width: 100%;
-    background-color: #fed040;
-    height: 100px;
-    position: absolute;
-    top: 10em;
-    z-index: -2;
-    transform: rotate(45deg); }
-
-  .extra5 {
-    width: 100%;
-    background-color: #fc3f21;
-    height: 100px;
-    position: absolute;
-    top: 0em;
-    z-index: -2;
-    transform: rotate(45deg); } }
+    padding-left: 0; }
 
 /*# sourceMappingURL=main.css.map */
