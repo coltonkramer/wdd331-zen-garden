@@ -263,6 +263,11 @@ footer {
     gap: 20px;
     position: absolute;
     top: 40em;
-    left: -7em; } }
+    left: -7em; }
+
+  .extra1 {
+    height: 200px;
+    width: 100%;
+    background: url("../assets/hexagon-geometrical-shape-outline-svgrepo-com.svg"); } }
 
 /*# sourceMappingURL=main.css.map */
